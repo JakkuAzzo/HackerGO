@@ -1,0 +1,120 @@
+html, body {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+*{
+    background-color: black;
+}
+
+.logo{
+  opacity: 0;
+  transform: rotate(29deg) translateX(50%);
+  position: absolute;
+  top: -30%;
+  right: 10%;
+  height: auto;
+  max-width: 70%;
+}
+
+h1{
+  transform: translateX(20%);
+  outline-style: solid;
+  outline-color: #fff;
+  opacity: 0;
+  color:#fff;
+}
+
+.button{
+  opacity: 0;
+  background-color: black;
+  color: white;
+  border: 2px solid red;
+  border-radius: 8px;
+  padding: 15px 15px;
+  position: absolute;
+  width: 20%;
+  height: 10%;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.20);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  bottom: 0;
+  left: 50%;
+}
+
+.button:hover{
+  background-color: white;
+  color: black;
+  box-shadow: 0 12px 16px 0 rgba(255,255,255,1), 0 17px 50px 0 rgba(255,255,255,1);
+}
+
+  .button-circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    display: block;
+    overflow: hidden;
+  }
+
+  .button-circle img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  /*.button:hover .button-circle {
+    display: block;
+  }
+
+  .button:hover .button-circle:hover {
+    cursor: pointer;
+  }*/
+
+  .button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .button-grid .button-circle {
+    margin: 10px;
+  }
+
+/* Define the keyframes for the fade in effect */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Apply the fade in animation to the logo and the button */
+h1, .logo, .button{
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+/* Delay the animation start to match the window load */
+h1, .logo, .button{
+  animation-delay: 1s;
+}

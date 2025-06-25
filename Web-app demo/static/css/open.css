@@ -1,0 +1,73 @@
+html, body {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+*{
+    background-color: black;
+}
+
+.logo{
+    opacity: 0;
+    transform: rotate(29deg) translateX(50%);
+    position: absolute;
+    top: -30%;
+    right: 10%;
+    height: auto;
+    max-width: 70%;
+}
+
+.button{
+    opacity: 0;
+    background-color: black;
+    color: white;
+    border: 2px solid red;
+    border-radius: 8px;
+    padding: 15px 15px;
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.20);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 12px 16px 0 rgba(255,255,255,1), 0 17px 50px 0 rgba(255,255,255,1);
+}
+
+/* Define the keyframes for the fade in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade in animation to the logo and the button */
+.logo, .button {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* Delay the animation start to match the window load */
+.logo, .button {
+    animation-delay: 1s;
+}
